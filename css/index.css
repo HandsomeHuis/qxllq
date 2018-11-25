@@ -1,0 +1,802 @@
+/*
+* @Author: admin
+* @Date:   2018-08-16 16:10:54
+* @Last Modified by:   admin
+* @Last Modified time: 2018-08-23 13:58:21
+*/
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	text-decoration: none;
+	letter-spacing: 4px;
+	font-family: '微软雅黑'
+}
+/* 固定部分 */
+body{
+	overflow: hidden;
+}
+.logo,.down,.mus,nav,.aside{
+	position: fixed;
+	z-index: 2;
+}
+.logo{
+	top: 20px;
+	left: 20px;
+}
+.mus{
+	top: 20px;
+	right: 20px;
+}
+.music{
+	top: 20px;
+	right: 20px;
+	animation: go 6s linear infinite;
+}
+
+.down{
+	bottom: 150px;
+    left: 50%;
+    margin-left: -153px;
+}
+nav{
+	bottom:0px;
+   
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+nav ul{
+	width: 1000px;
+	margin: 0px auto;
+}
+nav ul li a{
+	width: 200px;
+	height: 50px;
+    float: left;
+    color: #eee;
+    text-align: center;
+    line-height: 50px;
+}
+nav ul li:nth-child(1) a:hover{
+	background-color: yellow;
+}
+nav ul li:nth-child(2) a:hover{
+	background-color: green;
+}
+nav ul li:nth-child(3) a:hover{
+	background-color: red;
+}
+nav ul li:nth-child(4) a:hover{
+	background-color: skyblue;
+}
+nav ul li:nth-child(5) a:hover{
+	background-color: pink;
+}
+.aside {
+	right: 10px;
+	top: 120px;
+	
+}
+.aside li{
+	width: 30px;
+	height: 30px;
+	border: 1px solid red;
+	border-radius: 50%;
+	cursor: pointer;
+	margin: 10px;
+
+	
+}
+.aside .current{
+	background-image: url('../images/side_bg.png');
+	background-size: 90% 100%;
+	background-position: center center;
+	border: none;
+	width: 50px;
+	height: 50px;
+	margin-left: 0px;
+    animation: go 6s linear infinite;
+}
+
+
+
+/* 窗口部分 */
+body,html,section{
+	width: 100%;
+	height: 100%;
+}
+section{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+}
+section>div{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+section .screen1{
+	background-image: url('../images/bg01.jpg');
+	background-size:100% 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.screen1 .sky{
+	width: 100%;
+    margin-top: 20px;
+	position: relative;
+	overflow: hidden;
+	height: 200px;
+
+}
+.screen1 .sky .scloud{
+	position: absolute;
+	right: 400px;
+	top: 100px;
+	animation: sky 150s linear infinite;
+	z-index: 4;
+}
+.screen1 .sky .cloud{
+	position: absolute;
+	right: 50px;
+	top: 5px;
+	animation: sky 160s linear infinite;
+	z-index: 4;
+}
+.screen1 .ballon{
+	width: 500px;
+	margin: 0px auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -75px;
+    top: 20px;
+    animation: ballon 6s linear infinite;
+
+}
+.screen1 .txt{
+	width: 450px;
+	margin: 20px auto;
+	color: #eee;
+	font-size: 12px;
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    margin-left: -150px;
+    
+}
+.screen1 .txt span{
+	display: inline-block;
+	width: 100px;
+	height: 45px;
+	background-image: url('../images/logo-text.png');
+	background-size: 100% 100%;
+	background-position: right center;
+	background-repeat: no-repeat;
+	transition: 3s;
+}
+.screen1 .txt img{
+	transition: 3s;
+}
+.screen1 .txt p{
+	width: 400px;
+    margin-top: 20px;
+	transition: 3s;
+}
+
+.screen1 .change span {
+	margin-left: 600px;
+
+}
+.screen1 .change .spc{
+	display: inline-block;
+    height:45px; 
+	margin-left: -500px;
+	transform: rotate(180deg);
+}
+.screen1 .change .content{
+	transform: scale(0.1);
+	opacity: 0.1;
+}
+
+.screen1 .bottom{
+	width: 310px;
+	height: 50px;
+	color: #eee;
+	margin: 10px auto;
+	position: fixed;
+	bottom: 80px;
+	left: 50%;
+	margin-left: -155px;
+	z-index: 3;
+}
+
+.screen1 .bottom ul li{
+	float: left;
+	text-align: center;
+	border-right: 1px solid #eee;
+	padding-right:5px;
+	margin-left: 5px;
+}
+.screen1 .bottom p{
+	margin-left: 5px;
+}
+
+section .screen2{
+	width: 100%;
+	background-image: url('../images/bg02.jpg');
+	background-size:100% 100%;
+	position: relative;
+	overflow: hidden;
+}
+.screen2 .znz{
+    width: 500px;
+    margin: 0px auto;
+    height: 200px;
+    overflow: hidden;
+}
+.screen2 .znz .compass{
+	position: absolute;
+	left: 50%;
+    top: 20px;
+    margin-left: -63px;
+}
+.screen2 .znz .pointer{
+	position: absolute;
+	left: 50%;
+	top: 35px;
+	margin-left: -47px;
+	animation: pointer 8s linear infinite;
+}
+.screen2 .ballon{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 60px;
+	right: 250px;
+	animation: ballon 10s linear infinite;
+}
+.screen2 .txt{
+	width: 500px;
+	margin: 10px auto;
+
+	text-align: center;
+}
+.screen2 .txt span{
+	display: inline-block;
+    width: 120px;
+    height: 44px;
+    background-image: url('../images/logo-text.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    transition: 2s;
+}
+.screen2 .txt p{
+	font-size: 12px;
+	color: #eee;
+	margin-left: 50px;
+	width: 400px;
+	margin-top: 10px;
+	transition: 2s;
+}
+.screen2 img{
+	transition: 2s;
+}
+.screen2 .change>img{
+	margin-left: -1200px;
+	transform: rotate(180deg);
+
+}
+.screen2 .change p{
+	transform: scale(0.1);
+	opacity: 0.1;
+}
+
+
+section .screen3{
+	background-image: url('../images/bg03.jpg');
+	background-size:100% 100%;
+	overflow: hidden;
+	
+}
+.screen3 .hl{
+	width: 300px;
+	margin: 50px auto;
+
+    text-align: center;
+    animation: ballon 6s linear infinite;
+}
+.screen3 .pp{
+	width: 300px;
+	margin: 0px auto;
+	position: relative;
+
+}
+.screen3 .pp img{
+	position: absolute;
+}
+.screen3 .pp img:nth-child(1){
+	top: -100px;
+	left: 100px;
+	animation: pp 8s linear infinite;
+
+}
+.screen3 .pp img:nth-child(2){
+	top: -105px;
+	left: 88px;
+	animation: pp 9s linear infinite;
+}
+.screen3 .pp img:nth-child(3){
+	top: -50px;
+	left: 180px;
+	animation: pp 6s linear infinite;
+}
+.screen3 .pp img:nth-child(4){
+	top: -90px;
+	left: 150px;
+	animation: pp 4s linear infinite;
+}
+.screen3 .pp img:nth-child(5){
+	top: -102px;
+	left: 120px;
+	animation: pp 6s linear infinite;
+}
+.screen3 .pp img:nth-child(6){
+	top: -80px;
+	left: 100px;
+	animation: pp 16s linear infinite;
+}
+.screen3 .pp img:nth-child(7){
+	top: -120px;
+	left: 120px;
+	animation: pp 8s linear infinite;
+}
+.screen3 .pp img:nth-child(8){
+	top: -88px;
+	left: 250px;
+	animation: pp 6s linear infinite;
+}
+.screen3 .pp img:nth-child(9){
+	top: -100px;
+	left: 210px;
+	animation: pp 3s linear infinite;
+}
+.screen3 .pp img:nth-child(10){
+	top: -150px;
+	left: 190px;
+	animation: pp 7s linear infinite;
+}
+.screen3 .pp img:nth-child(11){
+	top: -130px;
+	left: 200px;
+	animation: pp 15s linear infinite;
+}
+.screen3 .pp img:nth-child(12){
+	top: -100px;
+	left: 200px;
+	animation: pp 4s linear infinite;
+}
+.screen3 .pp img:nth-child(13){
+	top: -150px;
+	left: 150px;
+	animation: pp 10s linear infinite;
+}
+.screen3 .txt{
+	width: 500px;
+	margin: 10px auto;
+
+	text-align: center;
+}
+.screen3 .txt span{
+	display: inline-block;
+    width: 120px;
+    height: 44px;
+    background-image: url('../images/logo-text.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    transition: 2s;
+}
+.screen3 .txt p{
+	font-size: 12px;
+	color: #eee;
+	margin-left: 50px;
+	width: 400px;
+	margin-top: 10px;
+	transition: 2s;
+}
+.screen3 img{
+	transition: 2s;
+}
+.screen3 .change>img{
+	margin-left: -1200px;
+	transform: rotate(180deg);
+
+}
+.screen3 .change p{
+	transform: scale(0.1);
+	opacity: 0.1;
+}
+
+section .screen4{
+	background-image: url('../images/bg04.jpg');
+	background-size:100% 100%;
+	overflow: hidden;
+	position: relative;
+}
+.screen4 .ballon{
+	width: 300px;
+	margin: 50px auto;
+	animation: xqq 6s linear infinite;
+	transform-origin: center bottom;
+	position: absolute;
+	top: -10px;
+	left: 54%;
+	margin-left: -130px;
+	transition: 2s;
+}
+.screen4 .txt{
+	width: 500px;
+	margin: 230px auto;
+
+	text-align: center;
+}
+.screen4 .txt span{
+	display: inline-block;
+    width: 120px;
+    height: 44px;
+    background-image: url('../images/logo-text.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    transition: 2s;
+}
+.screen4 .txt p{
+	font-size: 12px;
+	color: #eee;
+	margin-left: 50px;
+	width: 400px;
+	margin-top: 10px;
+	transition: 2s;
+}
+.screen4 img{
+	transition: 2s;
+}
+.screen4 .change>img{
+	margin-left: -1200px;
+	transform: rotate(180deg);
+
+}
+.screen4 .change p{
+	transform: scale(0.1);
+	opacity: 0.1;
+}
+section .screen5{
+	background-image: url('../images/bg05.jpg');
+	background-size:100% 100%;
+	overflow: hidden;
+	position: relative;
+}
+.screen5 .wxr{
+	width: 500px;
+	margin: 30px auto;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 0px;
+	margin-left: -250px;
+
+	animation: wxr 10s linear infinite; 
+}
+.screen5 .txt{
+	width: 500px;
+	margin: 230px auto;
+  
+	text-align: center;
+	z-index: 8;
+	position: absolute;
+	left: 32%;
+
+}
+.screen5 .txt span{
+	display: inline-block;
+    width: 120px;
+    height: 44px;
+    background-image: url('../images/logo-text.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    transition: 2s;
+}
+.screen5 .txt p{
+	font-size: 12px;
+	color: #eee;
+	width: 400px;
+	margin-left: 50px;
+	margin-top: 10px;
+	transition: 2s;
+}
+.screen5 img{
+	transition: 2s;
+}
+.screen5 .change>img{
+	margin-left: -1200px;
+	transform: rotate(180deg);
+
+}
+.screen5 .change p{
+	transform: scale(0.1);
+	opacity: 0.1;
+}
+.screen5 .ballon{
+	width: 200px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    animation: ballon 4s linear infinite;
+}
+.screen5 .ballon .b1{
+	bottom: 0px;
+	right: 60px;
+}
+.screen5 .ballon .b2{
+	bottom: 20px;
+	right: 20px;
+}
+
+
+section .screen6{
+	background-image: url('../images/bg06.jpg');
+	background-size:100% 100%;
+
+	overflow: hidden;
+	position: relative;
+}
+.screen6 .dd{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+ 	animation: dd 4s linear infinite;
+}
+.screen6 .sgj{
+	width: 130px;
+	margin: 20px auto;
+	animation: ballon 4s linear infinite;
+}
+.screen6 .txt{
+	width: 500px;
+	margin: 0px auto;
+    position: absolute;
+	text-align: center;
+	left: 32%;
+	top: 200px;
+}
+.screen6 .txt span{
+	display: inline-block;
+    width: 120px;
+    height: 44px;
+    background-image: url('../images/logo-text.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    transition: 2s;
+}
+.screen6 .txt p{
+	font-size: 12px;
+	color: #eee;
+	margin-left: 50px;
+	width: 400px;
+	margin-top: 10px;
+	transition: 2s;
+}
+.screen6 img{
+	transition: 2s;
+}
+.screen6 .change>img{
+	margin-left: -1200px;
+	transform: rotate(180deg);
+
+}
+.screen6 .change p{
+	transform: scale(0.1);
+	opacity: 0.1;
+}
+
+section .screen7{
+	background-image: url('../images/bg07.jpg');
+	background-size:100% 100%;
+	overflow: hidden;
+}
+.screen7 .heid{
+	width: 200px;
+	margin: 20px auto;
+	position: relative;
+	
+}
+.screen7 .heid .hole{
+	position: absolute;
+	animation: hole 4s linear infinite;
+}
+.screen7 .heid .light{
+	position: absolute;
+    animation: hole 4s linear infinite;
+}
+.screen7 .txt{
+	width: 500px;
+	margin: 0px auto;
+    position: absolute;
+    left: 30%;
+    top: 200px;
+	text-align: center;
+}
+.screen7 .txt span{
+	display: inline-block;
+    width: 120px;
+    height: 44px;
+    background-image: url('../images/logo-text.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    transition: 2s;
+}
+.screen7 .txt p{
+	font-size: 12px;
+	color: #eee;
+	width: 400px;
+	margin-left: 100px;
+	margin-top: 10px;
+	transition: 2s;
+}
+
+.screen7 img{
+	transition: 2s;
+}
+.screen7 .change>img{
+	margin-left: -1200px;
+	transform: rotate(180deg);
+
+}
+.screen7 .change p{
+	transform: scale(0.1);
+	opacity: 0.1;
+}
+.screen7 .dot{
+	width: 20px;
+}
+.screen7 .dot .p1{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	animation: p1 2s ease-in infinite;
+}
+.screen7 .dot .p2{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	animation: p2 2s ease-in infinite;
+}
+.screen7 .dot .p3{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	animation: p3 2s ease-in infinite;
+}
+.screen7 .dot .p4{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	animation: p4 2s ease-in infinite;
+}
+
+@keyframes go{
+	0%{
+      transform: rotate(0deg);
+	}
+	100%{
+      transform: rotate(360deg);
+	}
+}
+@keyframes sky{
+	0%{
+		transform: translate(0px, 0px)
+	}
+	100%{
+		transform: translate(-1900px, 0px);
+	}
+}
+@keyframes ballon{
+	0%,100%{
+		transform: translate(0px, 0px)
+	}
+	50%{
+		transform: translate(0px, 15px)
+	}
+}
+@keyframes pointer{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes pp{
+	from {
+		transform: translate(0px, 0px)
+	}
+	to{
+		transform: translate(0px, -100px)
+	}
+}
+@keyframes xqq{
+    0%,50%,100%{
+    	transform: rotate(0deg)
+    }
+    25%{
+    	transform: rotate(15deg)
+    }
+    75%{
+    	transform: rotate(-15deg)
+    }
+}
+@keyframes wxr{
+	0%,100%{
+		transform: scale(1)
+	}
+	25%{
+		transform: scale(1.5)
+	}
+	50%{
+		transform: scale(3)
+
+	}
+	75%{
+		transform: scale(6)
+	}	
+	
+}
+@keyframes hole{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes dd{
+	from {
+		transform: translate(0px, 0px);
+	}
+	to{
+		transform: translate(0px, 300px);
+	}
+}
+@keyframes p1{
+	0%{
+		transform: translate(0px, 0px);
+	}
+	100%{
+		transform: translate(620px, 40px);
+	}
+}
+@keyframes p2{
+	0%{
+		transform: translate(0px, 0px);
+	}
+	100%{
+		transform: translate(-620px, 40px);
+	}
+}
+
+@keyframes p3{
+	0%{
+		transform: translate(0px, 0px);
+	}
+	100%{
+		transform: translate(620px, -400px);
+	}
+}
+@keyframes p4{
+	0%{
+		transform: translate(0px, 0px);
+	}
+	100%{
+		transform: translate(-620px, -400px);
+	}
+}

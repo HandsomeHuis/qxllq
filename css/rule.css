@@ -1,0 +1,102 @@
+/*
+* @Author: admin
+* @Date:   2018-08-23 14:52:04
+* @Last Modified by:   admin
+* @Last Modified time: 2018-08-23 15:24:29
+*/
+
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		div{
+			width: 1200px;
+			margin: 0px auto;
+			position: relative;
+		}
+		header .title{
+		
+			height: 70px;
+			width: 330px;
+			background-image: url('../images/alogo.png');
+			background-position: center 111px;
+			float: left;
+			
+			
+		}
+		
+
+		div header{
+			overflow: hidden;
+			width: 1200px;
+			background-color: #fff;
+			box-shadow:1px 2px 3px 3px rgba(0, 0, 0, 0.3);
+		}
+		div ul {
+			float: left;
+			width: 500px;
+		}
+		div ul li {
+			list-style: none;
+		}
+		div ul li a{
+			float: left;
+			width: 100px;
+			line-height: 70px;
+			text-align: center;
+			margin-left: 50px;
+			text-decoration: none;
+			font-size: 18px;
+			color: #666;
+
+		}
+		div ul li a:hover{
+			color: red;
+		}
+		a.ts{
+			color: red;
+			border-bottom: 2px solid red;
+		}
+		article{
+			width: 100%;
+			margin: 50px auto;
+
+		}
+		.one{
+			border: 1px solid #ccc;
+			margin: 50px 0px;
+			line-height: 40px;
+			text-align: center;
+			border-collapse: collapse;
+			/* 边框线合并 */
+		}
+		.one th{
+			background-color: #eee;
+		}
+		.one tr{
+			border: 1px solid #ccc;
+		}
+		.two{
+			border: 1px solid #ccc;
+			margin: 100px 0px;
+			line-height: 40px;
+			text-align: center;
+			border-collapse: collapse;
+			/* 边框线合并 */
+		}
+		.two th{
+			background-color: #eee;
+		}
+		.two tr{
+			border: 1px solid #ccc;
+		}
+		.spc{
+			position: absolute;
+			left: 0px;
+			bottom: 338px;
+		}
+		.dd{
+			color: #bbb;
+			font-size: 14px;
+		}
+	
